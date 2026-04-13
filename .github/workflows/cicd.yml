@@ -49,7 +49,7 @@ jobs:
           echo "Executando SAST..."
 
   # 3. Docker Build, Container Scan & Push
-  docker-deploy:\
+  docker-deploy:
     needs: security-scan
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' # Só push no ECR se for na Main
